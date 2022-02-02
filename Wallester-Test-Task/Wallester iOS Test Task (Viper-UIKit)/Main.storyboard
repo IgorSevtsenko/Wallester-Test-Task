@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beer Details View Controller-->
+        <scene sceneID="doB-uF-c6c">
+            <objects>
+                <viewController storyboardIdentifier="BeerDetails" id="sgg-8q-5Fo" customClass="BeerDetailsViewController" customModule="Wallester_iOS_Test_Task__Viper_UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="euc-qA-xXX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xjw-he-p3C" customClass="BeerDetails" customModule="Wallester_iOS_Test_Task__Viper_UIKit_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MzO-EF-m8R"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Xjw-he-p3C" firstAttribute="top" secondItem="MzO-EF-m8R" secondAttribute="top" constant="40" id="c1m-7Y-X58"/>
+                            <constraint firstItem="Xjw-he-p3C" firstAttribute="trailing" secondItem="MzO-EF-m8R" secondAttribute="trailing" id="sXL-eJ-JbZ"/>
+                            <constraint firstItem="Xjw-he-p3C" firstAttribute="leading" secondItem="MzO-EF-m8R" secondAttribute="leading" id="sbE-VE-z2l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PnO-ih-mD6"/>
+                    <connections>
+                        <outlet property="beerDetails" destination="Xjw-he-p3C" id="baT-jC-7E5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozK-qg-Q5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1297" y="670"/>
+        </scene>
+        <!--Beers List Table View Controller-->
+        <scene sceneID="dxV-td-4qG">
+            <objects>
+                <tableViewController storyboardIdentifier="BeerList" id="9dh-eX-eh9" customClass="BeersListTableViewController" customModule="Wallester_iOS_Test_Task__Viper_UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="1cP-7W-W2C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9dh-eX-eh9" id="0hD-iU-3Fy"/>
+                            <outlet property="delegate" destination="9dh-eX-eh9" id="GNh-fQ-IaP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWq-W2-dWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1965" y="-159"/>
+        </scene>
+        <!--Favorite Beers View Controller-->
+        <scene sceneID="vEe-zu-8RT">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteBeers" id="kYC-9U-tTM" customClass="FavoriteBeersViewController" customModule="Wallester_iOS_Test_Task__Viper_UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jRa-v8-7gy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yyn-Wy-Wig">
+                                <rect key="frame" x="12" y="56" width="390" height="32"/>
+                                <segments>
+                                    <segment title="Name"/>
+                                    <segment title="Alcohol"/>
+                                    <segment title="EBC"/>
+                                    <segment title="IBU"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortBy:" destination="kYC-9U-tTM" eventType="valueChanged" id="Wcf-Ep-hdK"/>
+                                    <action selector="sortingBy:" destination="GWN-yo-vHx" eventType="valueChanged" id="5VE-vs-4tt"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-VN-Bqf">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="koW-yg-Xf4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="koW-yg-Xf4" firstAttribute="trailing" secondItem="Yyn-Wy-Wig" secondAttribute="trailing" constant="12" id="0kh-UB-Qvn"/>
+                            <constraint firstItem="5hM-VN-Bqf" firstAttribute="top" secondItem="Yyn-Wy-Wig" secondAttribute="bottom" constant="5" id="3WB-dp-3fe"/>
+                            <constraint firstItem="Yyn-Wy-Wig" firstAttribute="top" secondItem="koW-yg-Xf4" secondAttribute="top" constant="12" id="DQH-RU-FzH"/>
+                            <constraint firstItem="5hM-VN-Bqf" firstAttribute="leading" secondItem="koW-yg-Xf4" secondAttribute="leading" id="Kg6-1a-YEH"/>
+                            <constraint firstItem="koW-yg-Xf4" firstAttribute="bottom" secondItem="5hM-VN-Bqf" secondAttribute="bottom" id="PBh-oF-EeD"/>
+                            <constraint firstItem="Yyn-Wy-Wig" firstAttribute="leading" secondItem="koW-yg-Xf4" secondAttribute="leading" constant="12" id="SbH-kg-F3f"/>
+                            <constraint firstItem="5hM-VN-Bqf" firstAttribute="trailing" secondItem="koW-yg-Xf4" secondAttribute="trailing" id="wK2-Aq-xec"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoriteBeersList" destination="5hM-VN-Bqf" id="WKo-7N-iUu"/>
+                        <outlet property="sortingPicker" destination="Yyn-Wy-Wig" id="i19-Ii-ggO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEB-FY-k20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="GWN-yo-vHx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="-159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

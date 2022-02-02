@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0AA880277F91B80094ABAF /* BeersListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA87F277F91B80094ABAF /* BeersListProtocols.swift */; };
+		CF0AA883277FBBBA0094ABAF /* BeersListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA882277FBBBA0094ABAF /* BeersListModuleBuilder.swift */; };
+		CF0AA887277FC6190094ABAF /* BeersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA886277FC6190094ABAF /* BeersListTableViewController.swift */; };
+		CF0AA88B278081110094ABAF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA88A278081110094ABAF /* TabBarController.swift */; };
+		CF0AA8B12780F93B0094ABAF /* SystemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA8B02780F93B0094ABAF /* SystemImages.swift */; };
+		CF0AA904278E2E480094ABAF /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA903278E2E480094ABAF /* BeerCell.swift */; };
+		CF0AA906279097600094ABAF /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0AA905279097600094ABAF /* BeerCell.xib */; };
+		CF1D02F5277F66D400CC74D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D02F4277F66D400CC74D9 /* AppDelegate.swift */; };
+		CF1D02F7277F66D400CC74D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D02F6277F66D400CC74D9 /* SceneDelegate.swift */; };
+		CF1D02FE277F66D500CC74D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1D02FD277F66D500CC74D9 /* Assets.xcassets */; };
+		CF1D0301277F66D500CC74D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1D02FF277F66D500CC74D9 /* LaunchScreen.storyboard */; };
+		CF1D0310277F683A00CC74D9 /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D030F277F683A00CC74D9 /* PunkAPIService.swift */; };
+		CF1D0312277F685B00CC74D9 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0311277F685B00CC74D9 /* Beer.swift */; };
+		CF1D0314277F687300CC74D9 /* FavoriteBeers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0313277F687300CC74D9 /* FavoriteBeers.swift */; };
+		CF1D0316277F689600CC74D9 /* CodigKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0315277F689600CC74D9 /* CodigKeys.swift */; };
+		CF1D031B277F6A3900CC74D9 /* BeersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D031A277F6A3900CC74D9 /* BeersListInteractor.swift */; };
+		CF1D031F277F6B9200CC74D9 /* BeersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D031E277F6B9200CC74D9 /* BeersListPresenter.swift */; };
+		CF1D0322277F6E7F00CC74D9 /* BeersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D0321277F6E7F00CC74D9 /* BeersListRouter.swift */; };
+		CF22F11E279368AA00ADB715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF22F11D279368AA00ADB715 /* Main.storyboard */; };
+		CF22F12027938B0700ADB715 /* BeerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22F11F27938B0700ADB715 /* BeerDetailsPresenter.swift */; };
+		CF22F12527938BFD00ADB715 /* BeerDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22F12427938BFD00ADB715 /* BeerDetailsProtocols.swift */; };
+		CF22F12827938D5C00ADB715 /* BeerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22F12627938D5C00ADB715 /* BeerDetailsViewController.swift */; };
+		CF22F12F2799E17000ADB715 /* BeerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22F12E2799E17000ADB715 /* BeerDetailsInteractor.swift */; };
+		CF22F1322799EE5F00ADB715 /* BeerDetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22F1312799EE5F00ADB715 /* BeerDetailsModuleBuilder.swift */; };
+		CF37607427A6BBD500A14BD7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607327A6BBD500A14BD7 /* Protocols.swift */; };
+		CF37607627A6BD1D00A14BD7 /* FavoriteBeersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607527A6BD1D00A14BD7 /* FavoriteBeersPresenter.swift */; };
+		CF37607827A881EA00A14BD7 /* FavoriteBeersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607727A881EA00A14BD7 /* FavoriteBeersInteractor.swift */; };
+		CF37607A27A883A200A14BD7 /* FavoriteBeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607927A883A200A14BD7 /* FavoriteBeersViewController.swift */; };
+		CF37607C27A883B700A14BD7 /* FavoriteBeersModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607B27A883B700A14BD7 /* FavoriteBeersModuleBuilder.swift */; };
+		CF37607E27A884CD00A14BD7 /* FavoriteBeersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37607D27A884CD00A14BD7 /* FavoriteBeersRouter.swift */; };
+		CF37608727A89B6000A14BD7 /* FavoriteBeersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37608527A89B6000A14BD7 /* FavoriteBeersListCell.swift */; };
+		CF37608827A89B6000A14BD7 /* FavoriteBeersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF37608627A89B6000A14BD7 /* FavoriteBeersListCell.xib */; };
+		CF37608C27AAFA7300A14BD7 /* BeerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37608B27AAFA7300A14BD7 /* BeerDetails.swift */; };
+		CF67641427A19F90008999D0 /* BeerDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67641227A19F90008999D0 /* BeerDetailsCell.swift */; };
+		CF67641527A19F90008999D0 /* BeerDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF67641327A19F90008999D0 /* BeerDetailsCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF0AA87F277F91B80094ABAF /* BeersListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListProtocols.swift; sourceTree = "<group>"; };
+		CF0AA882277FBBBA0094ABAF /* BeersListModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListModuleBuilder.swift; sourceTree = "<group>"; };
+		CF0AA886277FC6190094ABAF /* BeersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListTableViewController.swift; sourceTree = "<group>"; };
+		CF0AA88A278081110094ABAF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CF0AA8B02780F93B0094ABAF /* SystemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImages.swift; sourceTree = "<group>"; };
+		CF0AA903278E2E480094ABAF /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
+		CF0AA905279097600094ABAF /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		CF1D02F1277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wallester iOS Test Task (Viper-UIKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1D02F4277F66D400CC74D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF1D02F6277F66D400CC74D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF1D02FD277F66D500CC74D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF1D0300277F66D500CC74D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF1D0302277F66D500CC74D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1D030F277F683A00CC74D9 /* PunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIService.swift; sourceTree = "<group>"; };
+		CF1D0311277F685B00CC74D9 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		CF1D0313277F687300CC74D9 /* FavoriteBeers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeers.swift; sourceTree = "<group>"; };
+		CF1D0315277F689600CC74D9 /* CodigKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodigKeys.swift; sourceTree = "<group>"; };
+		CF1D031A277F6A3900CC74D9 /* BeersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListInteractor.swift; sourceTree = "<group>"; };
+		CF1D031E277F6B9200CC74D9 /* BeersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListPresenter.swift; sourceTree = "<group>"; };
+		CF1D0321277F6E7F00CC74D9 /* BeersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListRouter.swift; sourceTree = "<group>"; };
+		CF22F11D279368AA00ADB715 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CF22F11F27938B0700ADB715 /* BeerDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsPresenter.swift; sourceTree = "<group>"; };
+		CF22F12427938BFD00ADB715 /* BeerDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsProtocols.swift; sourceTree = "<group>"; };
+		CF22F12627938D5C00ADB715 /* BeerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewController.swift; sourceTree = "<group>"; };
+		CF22F12E2799E17000ADB715 /* BeerDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsInteractor.swift; sourceTree = "<group>"; };
+		CF22F1312799EE5F00ADB715 /* BeerDetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsModuleBuilder.swift; sourceTree = "<group>"; };
+		CF37607327A6BBD500A14BD7 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		CF37607527A6BD1D00A14BD7 /* FavoriteBeersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersPresenter.swift; sourceTree = "<group>"; };
+		CF37607727A881EA00A14BD7 /* FavoriteBeersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersInteractor.swift; sourceTree = "<group>"; };
+		CF37607927A883A200A14BD7 /* FavoriteBeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersViewController.swift; sourceTree = "<group>"; };
+		CF37607B27A883B700A14BD7 /* FavoriteBeersModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersModuleBuilder.swift; sourceTree = "<group>"; };
+		CF37607D27A884CD00A14BD7 /* FavoriteBeersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersRouter.swift; sourceTree = "<group>"; };
+		CF37608527A89B6000A14BD7 /* FavoriteBeersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeersListCell.swift; sourceTree = "<group>"; };
+		CF37608627A89B6000A14BD7 /* FavoriteBeersListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteBeersListCell.xib; sourceTree = "<group>"; };
+		CF37608B27AAFA7300A14BD7 /* BeerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetails.swift; sourceTree = "<group>"; };
+		CF67641227A19F90008999D0 /* BeerDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsCell.swift; sourceTree = "<group>"; };
+		CF67641327A19F90008999D0 /* BeerDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerDetailsCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF1D02EE277F66D400CC74D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0AA881277FBB7D0094ABAF /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA882277FBBBA0094ABAF /* BeersListModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CF1D02E8277F66D400CC74D9 = {
+			isa = PBXGroup;
+			children = (
+				CF1D02F3277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit) */,
+				CF1D02F2277F66D400CC74D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF1D02F2277F66D400CC74D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D02F1277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1D02F3277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit) */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D02F4277F66D400CC74D9 /* AppDelegate.swift */,
+				CF1D02F6277F66D400CC74D9 /* SceneDelegate.swift */,
+				CF0AA88A278081110094ABAF /* TabBarController.swift */,
+				CF1D030A277F674500CC74D9 /* BeersList */,
+				CF1D030B277F675600CC74D9 /* FavoriteBeers */,
+				CF1D030C277F67A000CC74D9 /* BeerDetails */,
+				CF22F12A2796086600ADB715 /* Services */,
+				CF1D030D277F67EA00CC74D9 /* Entities */,
+				CF1D030E277F67F500CC74D9 /* Enums */,
+				CF1D02FD277F66D500CC74D9 /* Assets.xcassets */,
+				CF1D02FF277F66D500CC74D9 /* LaunchScreen.storyboard */,
+				CF1D0302277F66D500CC74D9 /* Info.plist */,
+				CF22F11D279368AA00ADB715 /* Main.storyboard */,
+			);
+			path = "Wallester iOS Test Task (Viper-UIKit)";
+			sourceTree = "<group>";
+		};
+		CF1D030A277F674500CC74D9 /* BeersList */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0319277F6A0700CC74D9 /* View */,
+				CF1D031C277F6B4F00CC74D9 /* Interactor */,
+				CF1D031D277F6B6100CC74D9 /* Presenter */,
+				CF1D0320277F6E4500CC74D9 /* Router */,
+				CF1D0323277F908000CC74D9 /* Protocols */,
+				CF0AA881277FBB7D0094ABAF /* Builder */,
+			);
+			path = BeersList;
+			sourceTree = "<group>";
+		};
+		CF1D030B277F675600CC74D9 /* FavoriteBeers */ = {
+			isa = PBXGroup;
+			children = (
+				CF37606D27A6BA2B00A14BD7 /* View */,
+				CF37606E27A6BA3200A14BD7 /* Interactor */,
+				CF37606F27A6BA3D00A14BD7 /* Presenter */,
+				CF37607027A6BA9A00A14BD7 /* Router */,
+				CF37607127A6BB2700A14BD7 /* Builder */,
+				CF37607227A6BB5100A14BD7 /* Protocols */,
+			);
+			path = FavoriteBeers;
+			sourceTree = "<group>";
+		};
+		CF1D030C277F67A000CC74D9 /* BeerDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F12227938B9700ADB715 /* View */,
+				CF22F12D2799E0E900ADB715 /* Interactor */,
+				CF22F12127938B1D00ADB715 /* Presenter */,
+				CF22F1302799EE3900ADB715 /* Builder */,
+				CF22F12327938BC800ADB715 /* Protocols */,
+			);
+			path = BeerDetails;
+			sourceTree = "<group>";
+		};
+		CF1D030D277F67EA00CC74D9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0311277F685B00CC74D9 /* Beer.swift */,
+				CF1D0313277F687300CC74D9 /* FavoriteBeers.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CF1D030E277F67F500CC74D9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0315277F689600CC74D9 /* CodigKeys.swift */,
+				CF0AA8B02780F93B0094ABAF /* SystemImages.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		CF1D0319277F6A0700CC74D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA886277FC6190094ABAF /* BeersListTableViewController.swift */,
+				CF0AA903278E2E480094ABAF /* BeerCell.swift */,
+				CF0AA905279097600094ABAF /* BeerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1D031C277F6B4F00CC74D9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D031A277F6A3900CC74D9 /* BeersListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CF1D031D277F6B6100CC74D9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D031E277F6B9200CC74D9 /* BeersListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CF1D0320277F6E4500CC74D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D0321277F6E7F00CC74D9 /* BeersListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CF1D0323277F908000CC74D9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA87F277F91B80094ABAF /* BeersListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CF22F12127938B1D00ADB715 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F11F27938B0700ADB715 /* BeerDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CF22F12227938B9700ADB715 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F12627938D5C00ADB715 /* BeerDetailsViewController.swift */,
+				CF37608B27AAFA7300A14BD7 /* BeerDetails.swift */,
+				CF67641227A19F90008999D0 /* BeerDetailsCell.swift */,
+				CF67641327A19F90008999D0 /* BeerDetailsCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF22F12327938BC800ADB715 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F12427938BFD00ADB715 /* BeerDetailsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CF22F12A2796086600ADB715 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D030F277F683A00CC74D9 /* PunkAPIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF22F12D2799E0E900ADB715 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F12E2799E17000ADB715 /* BeerDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CF22F1302799EE3900ADB715 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CF22F1312799EE5F00ADB715 /* BeerDetailsModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CF37606D27A6BA2B00A14BD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607927A883A200A14BD7 /* FavoriteBeersViewController.swift */,
+				CF37608527A89B6000A14BD7 /* FavoriteBeersListCell.swift */,
+				CF37608627A89B6000A14BD7 /* FavoriteBeersListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF37606E27A6BA3200A14BD7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607727A881EA00A14BD7 /* FavoriteBeersInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CF37606F27A6BA3D00A14BD7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607527A6BD1D00A14BD7 /* FavoriteBeersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CF37607027A6BA9A00A14BD7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607D27A884CD00A14BD7 /* FavoriteBeersRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CF37607127A6BB2700A14BD7 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607B27A883B700A14BD7 /* FavoriteBeersModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CF37607227A6BB5100A14BD7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF37607327A6BBD500A14BD7 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF1D02F0277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1D0305277F66D500CC74D9 /* Build configuration list for PBXNativeTarget "Wallester iOS Test Task (Viper-UIKit)" */;
+			buildPhases = (
+				CF1D02ED277F66D400CC74D9 /* Sources */,
+				CF1D02EE277F66D400CC74D9 /* Frameworks */,
+				CF1D02EF277F66D400CC74D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wallester iOS Test Task (Viper-UIKit)";
+			productName = "Wallester iOS Test Task (Viper-UIKit)";
+			productReference = CF1D02F1277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF1D02E9277F66D400CC74D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CF1D02F0277F66D400CC74D9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CF1D02EC277F66D400CC74D9 /* Build configuration list for PBXProject "Wallester iOS Test Task (Viper-UIKit)" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1D02E8277F66D400CC74D9;
+			productRefGroup = CF1D02F2277F66D400CC74D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF1D02F0277F66D400CC74D9 /* Wallester iOS Test Task (Viper-UIKit) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF1D02EF277F66D400CC74D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1D0301277F66D500CC74D9 /* LaunchScreen.storyboard in Resources */,
+				CF1D02FE277F66D500CC74D9 /* Assets.xcassets in Resources */,
+				CF0AA906279097600094ABAF /* BeerCell.xib in Resources */,
+				CF22F11E279368AA00ADB715 /* Main.storyboard in Resources */,
+				CF67641527A19F90008999D0 /* BeerDetailsCell.xib in Resources */,
+				CF37608827A89B6000A14BD7 /* FavoriteBeersListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF1D02ED277F66D400CC74D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF37607627A6BD1D00A14BD7 /* FavoriteBeersPresenter.swift in Sources */,
+				CF0AA904278E2E480094ABAF /* BeerCell.swift in Sources */,
+				CF37607427A6BBD500A14BD7 /* Protocols.swift in Sources */,
+				CF37607A27A883A200A14BD7 /* FavoriteBeersViewController.swift in Sources */,
+				CF22F12F2799E17000ADB715 /* BeerDetailsInteractor.swift in Sources */,
+				CF37607E27A884CD00A14BD7 /* FavoriteBeersRouter.swift in Sources */,
+				CF22F12527938BFD00ADB715 /* BeerDetailsProtocols.swift in Sources */,
+				CF22F12027938B0700ADB715 /* BeerDetailsPresenter.swift in Sources */,
+				CF1D0310277F683A00CC74D9 /* PunkAPIService.swift in Sources */,
+				CF0AA88B278081110094ABAF /* TabBarController.swift in Sources */,
+				CF37608C27AAFA7300A14BD7 /* BeerDetails.swift in Sources */,
+				CF1D031F277F6B9200CC74D9 /* BeersListPresenter.swift in Sources */,
+				CF1D0312277F685B00CC74D9 /* Beer.swift in Sources */,
+				CF1D031B277F6A3900CC74D9 /* BeersListInteractor.swift in Sources */,
+				CF1D02F5277F66D400CC74D9 /* AppDelegate.swift in Sources */,
+				CF0AA8B12780F93B0094ABAF /* SystemImages.swift in Sources */,
+				CF37607C27A883B700A14BD7 /* FavoriteBeersModuleBuilder.swift in Sources */,
+				CF0AA887277FC6190094ABAF /* BeersListTableViewController.swift in Sources */,
+				CF22F12827938D5C00ADB715 /* BeerDetailsViewController.swift in Sources */,
+				CF0AA880277F91B80094ABAF /* BeersListProtocols.swift in Sources */,
+				CF1D02F7277F66D400CC74D9 /* SceneDelegate.swift in Sources */,
+				CF1D0316277F689600CC74D9 /* CodigKeys.swift in Sources */,
+				CF1D0322277F6E7F00CC74D9 /* BeersListRouter.swift in Sources */,
+				CF0AA883277FBBBA0094ABAF /* BeersListModuleBuilder.swift in Sources */,
+				CF37608727A89B6000A14BD7 /* FavoriteBeersListCell.swift in Sources */,
+				CF37607827A881EA00A14BD7 /* FavoriteBeersInteractor.swift in Sources */,
+				CF22F1322799EE5F00ADB715 /* BeerDetailsModuleBuilder.swift in Sources */,
+				CF1D0314277F687300CC74D9 /* FavoriteBeers.swift in Sources */,
+				CF67641427A19F90008999D0 /* BeerDetailsCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF1D02FF277F66D500CC74D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1D0300277F66D500CC74D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF1D0303277F66D500CC74D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF1D0304277F66D500CC74D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1D0306277F66D500CC74D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wallester iOS Test Task (Viper-UIKit)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Igor.Wallester-iOS-Test-Task--Viper-UIKit-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF1D0307277F66D500CC74D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wallester iOS Test Task (Viper-UIKit)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Igor.Wallester-iOS-Test-Task--Viper-UIKit-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF1D02EC277F66D400CC74D9 /* Build configuration list for PBXProject "Wallester iOS Test Task (Viper-UIKit)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1D0303277F66D500CC74D9 /* Debug */,
+				CF1D0304277F66D500CC74D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1D0305277F66D500CC74D9 /* Build configuration list for PBXNativeTarget "Wallester iOS Test Task (Viper-UIKit)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1D0306277F66D500CC74D9 /* Debug */,
+				CF1D0307277F66D500CC74D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF1D02E9277F66D400CC74D9 /* Project object */;
+}
