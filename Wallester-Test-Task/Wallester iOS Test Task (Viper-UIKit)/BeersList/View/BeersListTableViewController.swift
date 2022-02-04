@@ -35,7 +35,10 @@ class BeersListTableViewController: UITableViewController,BeersListViewProtocol 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //MARK: - Creating BeerCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BeerCell", for: indexPath) as! BeerCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BeerCell", for: indexPath) as? BeerCell else{
+            print("Failed to instantiate cell as BeerCell")
+            return UITableViewCell()
+        }
         cell.cellDelegate = self
         
         //MARK: - Beer for each cell

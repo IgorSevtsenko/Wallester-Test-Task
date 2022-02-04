@@ -74,7 +74,11 @@ extension FavoriteBeersViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let beer = presenter.favoriteBeers[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteBeersListCell", for: indexPath) as! FavoriteBeersListCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteBeersListCell", for: indexPath) as? FavoriteBeersListCell else{
+            print("Failed to instantiate cell as FavoriteBeerListCell")
+            return UITableViewCell()
+            
+        }
         cell.beerName.text = beer.name
         return cell
     }

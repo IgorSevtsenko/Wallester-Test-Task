@@ -12,6 +12,7 @@ class BeerDetailsPresenter:BeerDetailsPresenterProtocol{
     
     var interactor: BeerDetailsInteractorProtocol!
     
+    
     func beerName() -> String {
         interactor.beer.name
     }

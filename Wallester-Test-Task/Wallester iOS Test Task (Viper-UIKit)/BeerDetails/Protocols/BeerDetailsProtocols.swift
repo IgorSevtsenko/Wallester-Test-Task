@@ -25,3 +25,7 @@ protocol BeerDetailsInteractorProtocol: AnyObject{
     func beerIsFavorite() -> Bool
 }
 
+protocol BeerDetailsViewProtocol: UIViewController{
+    var presenter: BeerDetailsPresenterProtocol! {get set}
+}
+

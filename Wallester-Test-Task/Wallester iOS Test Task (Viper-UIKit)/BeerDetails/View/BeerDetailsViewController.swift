@@ -7,9 +7,9 @@
 
 import UIKit
 
-class BeerDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    
+class BeerDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, BeerDetailsViewProtocol{    
     var presenter: BeerDetailsPresenterProtocol!
+    
     @IBOutlet var beerDetails: BeerDetails!
     
     override func viewDidLoad() {
@@ -27,12 +27,16 @@ class BeerDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = beerDetails.dequeueReusableCell(withIdentifier: "BeerDetailsCell", for: indexPath) as! BeerDetailsCell
+        guard let cell = beerDetails.dequeueReusableCell(withIdentifier: "BeerDetailsCell", for: indexPath) as? BeerDetailsCell else{
+            print("Failed to instantiate cell as BeerDetailsCell")
+            return UITableViewCell()
+        }
         
         cell.selectionStyle = .none
         cell.beerDetails.textAlignment = .center
@@ -72,8 +76,6 @@ class BeerDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         beerDetails.isScrollEnabled = false
         let nib = UINib(nibName: "BeerDetailsCell", bundle: nil)
         self.beerDetails.register(nib, forCellReuseIdentifier: "BeerDetailsCell")
-        
-        
     }
     
     //MARK: - Add or remove beer from favorites
@@ -82,3 +84,4 @@ class BeerDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         navigationItem.rightBarButtonItem?.tintColor = presenter.addToFavoriteButtonColor()
     }
 }
+
